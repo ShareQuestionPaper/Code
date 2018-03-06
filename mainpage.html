@@ -12,11 +12,68 @@
 			<h2 class="text-center">ShareQuestionPaper</h2>
 		</div>
 		<hr>
-		<div class="container-fluid">
-			<h4>Search</h4>
-		</div>
+		<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+				<ul class="nav navbar-nav">
+      		<li class="active"><a href="#">Home</a></li>
+      		<li><a href="#">Discussion</a></li>
+    			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Question Papers <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+							 <li><a href="#">Amrita School of Enginnering</a></li>
+							 <li><a href="#">Amrita School of Arts and Sciences</a></li>
+						 	</ul>
+					</li>
+				</ul>
+			 </div>
+		</nav>
 		<hr>
 		<div class="row">
+			<form>
+				<div class="col-sm-2">
+					<div class="form-group">
+						<label for="sel1">School</label>
+						<select class="form-control" id="school">
+							 <option>Amrita School of Engineering</option>
+							 <option>Amrita School of Arts and Sciences</option>
+							 <option>Amrita School of Bitotechnology</option>
+							 <option>MBA</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group">
+						<label for="branch">Branch</label>
+						<select class="form-control" id="branch">
+							 <option>CSE</option>
+							 <option>ECE</option>
+							 <option>ME</option>
+							 <option>MBA</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group">
+						<label for="semester">Semester</label>
+						<select class="form-control" id="semester">
+							 <option>Sem1</option>
+							 <option>Sem2</option>
+							 <option>Sem3</option>
+							 <option>Sem4</option>
+							 <option>Sem5</option>
+							 <option>Sem6</option>
+							 <option>Sem7</option>
+							 <option>Sem8</option>
+
+
+
+						</select>
+					</div>
+				</div>
+				<div class="input-group-btn">
+					<label for="button">Search</label>
+        	<button class="btn btn-default" type="submit" id="button"><i class="glyphicon glyphicon-search"></i></button>
+      	</div>
+			</form>
 			<div class="col-sm-2 col-sm-offset-10">
 				<div class="panel panel-default">
 	  				<div class="panel-heading">Most Contributed</div>
@@ -41,5 +98,4 @@
 			</div>
 		</div>
 	</body>
-	<script src="script.js"></script>
 </html>
