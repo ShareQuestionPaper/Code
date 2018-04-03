@@ -1,4 +1,4 @@
-function getParameterByName(name, url) {
+  function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -10,7 +10,7 @@ function getParameterByName(name, url) {
 function check(){
 	var status = getParameterByName('status');
 	if (status == "noquestionpaperfound"){
-		alert("No question papers with the given query found ")
+		alert("No question papers with the given query found")
 	}
 }
 check();
@@ -18,9 +18,13 @@ function search(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            //Must add the displaying part here
+          var fileNames = JSON.parse(this.responseText);
+          for(x in fileNames)
+          {
+             document.getElementById("title").innerHTML = fileNames[x] ;
+          }
         }
     };
-    xhttp.open("GET", "search.php?query="+query, true);
+    xhttp.open("GET","search.php?query="+query, true);
     xhttp.send();
 }
