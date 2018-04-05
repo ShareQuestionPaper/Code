@@ -1,0 +1,16 @@
+.manual-row-padding{
+	margin-top: 20px;
+}
+.image-class{
+
+}
+.manual-label{
+	display:block;
+	text-align: center;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}

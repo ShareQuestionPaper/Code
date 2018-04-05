@@ -6,7 +6,9 @@
 	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  	<link rel="stylesheet" type = "text/css" href="style.css">
 	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  	<script src="script.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -28,164 +30,148 @@
 			 </div>
 		</nav>
 		<hr>
-		<div class="row">
-			<form action="search.php" method="post">
-				<div class="col-sm-2 col-md-offset-1">
-					<div class="form-group">
-						<label for="school">School</label>
-						<select class="form-control" name="school">
-							 <option>Amrita School of Engineering</option>
-							 <option>Amrita School of Arts and Sciences</option>
-							 <option>Amrita School of Bitotechnology</option>
-							 <option>MBA</option>
-						</select>
-					</div>
+		<form class="form-horizontal" action="search.php" method="post">
+			<div class="row">
+			<div class="col-sm-2 col-md-offset-1">
+				<div class="form-group">
+					<label for="sel1" class="manual-label">School</label>
+					<select class="form-control" id="school">
+						 <option>Amrita School of Engineering</option>
+						 <option>Amrita School of Arts and Sciences</option>
+						 <option>Amrita School of Bitotechnology</option>
+						 <option>MBA</option>
+					</select>
 				</div>
-				<div class="col-sm-2">
-					<div class="form-group">
-						<label for="branch">Branch</label>
-						<select class="form-control" name="branch">
-							 <option>CSE</option>
-							 <option>ECE</option>
-							 <option>ME</option>
-							 <option>MBA</option>
-						</select>
-					</div>
+			</div>	
+			<div class="col-sm-1 col-md-offset-1">
+				<div class="form-group">
+					<label for="branch" class="manual-label">Branch</label>
+					<select class="form-control" id="branch">
+						 <option>CSE</option>
+						 <option>ECE</option>
+						 <option>ME</option>
+						 <option>MBA</option>
+					</select>
 				</div>
-				<div class="col-sm-2">
-					<div class="form-group">
-						<label for="semester">Semester</label>
-						<select class="form-control" name="semester">
-							 <option>Sem1</option>
-							 <option>Sem2</option>
-							 <option>Sem3</option>
-							 <option>Sem4</option>
-							 <option>Sem5</option>
-							 <option>Sem6</option>
-							 <option>Sem7</option>
-							 <option>Sem8</option>
-						</select>
-					</div>
+			</div>
+			<div class="col-sm-2 col-md-offset-1">
+				<div class="form-group">
+					<label for="semester" class="manual-label">Semester</label>
+					<select class="form-control" id="semester">
+						 <option>Sem1</option>
+						 <option>Sem2</option>
+						 <option>Sem3</option>
+						 <option>Sem4</option>
+						 <option>Sem5</option>
+						 <option>Sem6</option>
+						 <option>Sem7</option>
+						 <option>Sem8</option>
+					</select>
 				</div>
-				<div class="col-sm-2">
-					<div class="form-group">
-						<label for="subject">Subject</label>
-						<select class="form-control" name="subject">
-							<option>CTPS</option>
-							<option>Embedded Systems </option>
-							<option>C programming</option>
-							<option>EEE</option>
-							 <option>Digital Circuits and Systems</option>
-							 <option>Computer Essentials</option>
-							 <option>Object Oriented Programming</option>
-							 <option>Data Stuctures</option>
-							 <option>Algotithm Analysis</option>
-							 <option>Operating Systems<option>
-							 <option>Physics</option>
-							 <option>Mathematics</option>
-						</select>
-					</div>
-				</div>
-				<br>
-				<div class="input-group-btn">
-        	<button class="btn btn-default" type="submit" id="button1"><i class="glyphicon glyphicon-search"></i></button>
-      	</div>
-			</form>
+			</div>
+			<div class="input-group-btn">
+				<label for="button">Search</label>
+        		<button class="btn btn-default" type="submit" id="button"><i class="glyphicon glyphicon-search"></i></button>
+      		</div>
 		</div>
-		<div class="row row-eq-height">
-			<div class="col-sm-9 col-md-offset-1 well well-sm">
+		</form>
+		<div class="col-sm-8">
+			<div class="row-eq-height">
 				<!-- Displaying searched question papers is here -->
-				<div class="col-sm-3 manual-row-padding well">
+				<div class="col-sm-3 col-md-offset-1 well">
 					<div class="card" >
 						<img class="img-responsive" src="pdf.png" alt="Card image cap">
 	  					<div class="card-body text-center">
-	    					<h4 class="card-title" id="title">Card title</h4>
-	    					<a href="#!" class="btn btn-primary">Download</a>
+	    					<h4 class="card-title">Introduction to Computer Systems</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
 	  					</div>
 					</div>
 				</div>
-				<div class="col-sm-3 manual-row-padding well">
+				<div class="col-sm-3 col-md-offset-1 well">
 					<div class="card">
 						<img class="img-responsive" src="pdf.png" alt="Card image cap">
 	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
-
-	    					<a href="#!" class="btn btn-primary">Download</a>
+	    					<h4 class="card-title">Introduction to Networking and a lot of stuff</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
 	  					</div>
 					</div>
 				</div>
-				<div class="col-sm-3 manual-row-padding well">
+				<div class="col-sm-3 col-md-offset-1 well">
 					<div class="card">
 						<img class="img-responsive" src="pdf.png" alt="Card image cap">
 	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
-
-	    					<a href="#!" class="btn btn-primary">Download</a>
+	    					<h4 class="card-title">Another Long Boring Name to check :(</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
 	  					</div>
 					</div>
 				</div>
-				<div class="col-sm-3 manual-row-padding well">
+				<div class="col-sm-3 col-md-offset-1 well">
 					<div class="card">
 						<img class="img-responsive" src="pdf.png" alt="Card image cap">
 	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
-
-	    					<a href="#!" class="btn btn-primary">Download</a>
+	    					<h4 class="card-title">Once more come on type something</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
 	  					</div>
 					</div>
 				</div>
-				<div class="col-sm-3 manual-row-padding well">
-					<div class="card">
-						<img class="img-responsive" src="pdf.png" alt="Card image cap">
-	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
 
-	    					<a href="#!" class="btn btn-primary">Download</a>
-	  					</div>
-					</div>
-				</div>
-				<div class="col-sm-3 manual-row-padding well">
-					<div class="card">
-						<img class="img-responsive" src="pdf.png" alt="Card image cap">
-	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
-
-	    					<a href="#!" class="btn btn-primary">Download</a>
-	  					</div>
-					</div>
-				</div>
-				<div class="col-sm-3 manual-row-padding well">
-					<div class="card">
-						<img class="img-responsive" src="pdf.png" alt="Card image cap">
-	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
-
-	    					<a href="#!" class="btn btn-primary">Download</a>
-	  					</div>
-					</div>
-				</div>
-				<div class="col-sm-3 manual-row-padding well">
-					<div class="card">
-						<img class="img-responsive" src="pdf.png" alt="Card image cap">
-	  					<div class="card-body text-center">
-	    					<h4 class="card-title">Card title</h4>
-
-	    					<a href="#!" class="btn btn-primary">Download</a>
-	  					</div>
-					</div>
-				</div>
 			</div>
-			<div class="col-sm-2">
+			<div class="row-eq-height">
+				<div class="col-sm-3 col-md-offset-1 well">
+					<div class="card">
+						<img class="img-responsive" src="pdf.png" alt="Card image cap">
+	  					<div class="card-body text-center">
+	    					<h4 class="card-title">Card title</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
+	  					</div>
+					</div>
+				</div>
+
+				<div class="col-sm-3 col-md-offset-1 well">
+					<div class="card">
+						<img class="img-responsive" src="pdf.png" alt="Card image cap">
+	  					<div class="card-body text-center">
+	    					<h4 class="card-title">Card title</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
+	  					</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-offset-1 well">
+					<div class="card">
+						<img class="img-responsive" src="pdf.png" alt="Card image cap">
+	  					<div class="card-body text-center">
+	    					<h4 class="card-title">Card title</h4>
+	    					<a href="#!" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></a>
+	    					<a href="#!" class="btn btn-primary"><span class="fa fa-eye"></span></a>
+	  					</div>
+					</div>
+				</div>																				
+			</div>
+		</div>
+		<div class="col-sm-2 col-md-offset-1">
 				<div class="panel panel-default">
-	  				<div class="panel-heading">Most Contributed</div>
-	  				<div class="panel-body">Name1</div>
-	  				<div class="panel-body">Name2</div>
-	  				<div class="panel-body">Name3</div>
-	  				<div class="panel-body">Name4</div>
-	  				<div class="panel-body">Name5</div>
+					<table class="table" id="mc">
+						<thead>
+							<span class="text-center">Most Contributed</span>
+							<tr>
+								<th>#</th>
+								<th>Name</th>
+								<th>Points</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- content will be added dynamically -->
+						</tbody>
+					</table>
 				</div>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-2 col-md-offset-1">
 				<div class="panel panel-default">
 	  				<div class="panel-heading">Recently Uploaded</div>
 	  				<div class="panel-body">Name1</div>
@@ -195,6 +181,5 @@
 	  				<div class="panel-body">Name5</div>
 				</div>
 			</div>
-		</div>
 	</body>
 </html>
